@@ -40,11 +40,6 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        //just for bug testing
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
 
         if (currentHealth <= 0)
         {

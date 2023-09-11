@@ -14,7 +14,7 @@ public class PlayerCollisionHandler : MonoBehaviour
     }
     IEnumerator ResetCollision()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         currentCollision = "Hunger";
         Debug.Log("The current collision is " + currentCollision);
     }

@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.26149872, g: 0.74425733, b: 0.7830189, a: 1}
   m_FogMode: 2
   m_FogDensity: 0.05
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44129857, g: 0.4901014, b: 0.57015187, a: 1}
+  m_IndirectSpecularColor: {r: 0.44129822, g: 0.49010098, b: 0.5701514, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1250,10 +1250,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
   overTimeDamageAmount: 10
+  waitBeforeDamage: 1
   healthbar: {fileID: 349450981}
-  youDied: {fileID: 694168730}
+  gameOverCanvas: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  finalText: {fileID: 0}
+  deathCauseText: {fileID: 0}
+  score: {fileID: 0}
 --- !u!114 &823270814
 MonoBehaviour:
   m_ObjectHideFlags: 0
