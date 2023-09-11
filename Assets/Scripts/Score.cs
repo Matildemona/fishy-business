@@ -18,10 +18,5 @@ public class Score : MonoBehaviour
     void Update()
     {
         scoretext.text = player.position.z.ToString("0") + "m";
-
-        //if (playerHealth.currentHealth <= 0)
-        //{
-            
-        //}
     }
 }

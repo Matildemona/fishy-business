@@ -4,18 +4,31 @@ using System.Collections.Generic;
 using UnityEngine;
 // should maybe make a level loader later idk
 using UnityEngine.SceneManagement;
-
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
+    int currentHealth;
+
+    [Header("Healthbar Settings")]
+    [Tooltip("Maximum amount of health.")]
     public int maxHealth = 100;
-    public int currentHealth;
-
+    [Tooltip("How much damage to loose each time.")]
     public int overTimeDamageAmount = 20;
+    [Tooltip("How long before more damage should be taken.")]
+    public float waitBeforeDamage = 1f;
 
+    [Header("Scripts")]
     public Healthbar healthbar;
 
-    public GameObject youDied;
+    public GameObject gameOverCanvas;
+    public GameObject inGameCanvas;
+
+    public TMP_Text finalText;
+    public TMP_Text deathCauseText;
+
+    public Score score;
+
 
     void Start()
     {
@@ -35,11 +48,18 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            youDied.SetActive(true);
+            gameOverCanvas.SetActive(true);
+            inGameCanvas.SetActive(false);
+            finalText.text = "You got " + score.scoretext.text + " up the stream!"; 
+            deathCauseText.text = "You died of " + PlayerCollisionHandler.currentCollision + "!";
             Time.timeScale = 0;
         }
+
+        //If player collided with "death cause" and it has 0 health: death cause "insert death cause".
+        //Death Causes: Starved, Eaten(bird, fish), Poison, Human, contamination, plastic fork(tin can, bottle cap).
+
     }
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
@@ -63,13 +83,13 @@ public class PlayerHealth : MonoBehaviour
         {
         TakeDamage(damage);
         healthbar.SetHealth(currentHealth);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(waitBeforeDamage);
         }
     }
 
     public void ReloadLevel()
     {
-        youDied.SetActive(false);
+        gameOverCanvas.SetActive(false);
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
