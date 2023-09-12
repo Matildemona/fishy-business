@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fish
   - Tin Can
+  - Audio
   layers:
   - Default
   - TransparentFX

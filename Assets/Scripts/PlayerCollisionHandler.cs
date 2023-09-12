@@ -10,11 +10,19 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     public TMP_Text funFact;
 
+    AudioManager audioManager;
+
+    void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     //Make the death cause change depending on the last collision
     private void OnTriggerEnter(Collider collision)
     {
         currentCollision = collision.tag;
-        Debug.Log("The current collision is " + currentCollision);
+        PlayCollisionSFX();
+        //Debug.Log("The current collision is " + currentCollision);
         StartCoroutine(ResetCollision());
     }
 
@@ -41,5 +49,13 @@ public class PlayerCollisionHandler : MonoBehaviour
         yield return new WaitForSeconds(1f);
         currentCollision = "Hunger";
         Debug.Log("The current collision is " + currentCollision);
+    }
+
+    void PlayCollisionSFX()
+    {
+        if(currentCollision == "Fish")
+        {
+            audioManager.PlaySFX(audioManager.nomSFX);
+        }
     }
 }

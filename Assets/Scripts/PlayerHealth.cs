@@ -43,10 +43,20 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            //StartCoroutine(Die());
             gameOverCanvas.SetActive(true);
             inGameCanvas.SetActive(false);
             finalText.text = "You got " + score.scoretext.text + " up the stream!";
+
+            if (PlayerCollisionHandler.currentCollision == null)
+            {
+                deathCauseText.text = "You died of hunger!";
+
+            }
+            else
+            {
             deathCauseText.text = "You died of " + PlayerCollisionHandler.currentCollision + "!";
+            }
             Time.timeScale = 0;
         }
 
@@ -70,7 +80,6 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator DamageOverTimeCoroutine(int damage)
     {
         //there's some sort of bug where healthbar goes over 100, but I'll fix that later.
-        //should this be a smooth transition or a hash one? like adding decimals to the subtraction (float/int). 
         while (maxHealth > 0)
         {
         TakeDamage(damage);
@@ -78,6 +87,20 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(waitBeforeDamage);
         }
     }
+
+    IEnumerator Die()
+    {
+        Time.timeScale = 0.3f;
+        yield return new WaitForSeconds(0.3f);
+        gameOverCanvas.SetActive(true);
+        inGameCanvas.SetActive(false);
+        finalText.text = "You got " + score.scoretext.text + " up the stream!";
+        deathCauseText.text = "You died of " + PlayerCollisionHandler.currentCollision + "!";
+        //bug: dosen't seem to do timescale 0 at this point - gonna fix later.
+        Time.timeScale = 0;
+        //GetComponent<PlayerControls>().enabled = false;
+    }
+
 
     public void ReloadLevel()
     {
