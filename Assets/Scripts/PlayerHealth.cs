@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     [Tooltip("How long before more damage should be taken.")]
     public float waitBeforeDamage = 1f;
 
+
     [Header("Scripts")]
     public Healthbar healthbar;
 
@@ -29,13 +30,14 @@ public class PlayerHealth : MonoBehaviour
 
     public Score score;
 
-
     void Start()
     {
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
         DamageOverTime(overTimeDamageAmount);
         Time.timeScale = 1;
+        gameOverCanvas.SetActive(false);
+        inGameCanvas.SetActive(true);
     }
 
     void Update()
@@ -43,7 +45,6 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            //StartCoroutine(Die());
             gameOverCanvas.SetActive(true);
             inGameCanvas.SetActive(false);
             finalText.text = "You got " + score.scoretext.text + " up the stream!";
@@ -69,6 +70,12 @@ public class PlayerHealth : MonoBehaviour
     public void AddHealth(int health)
     {
         currentHealth += health;
+
+        if (currentHealth >= maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
         healthbar.SetHealth(currentHealth);
     }
 
@@ -79,7 +86,6 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator DamageOverTimeCoroutine(int damage)
     {
-        //there's some sort of bug where healthbar goes over 100, but I'll fix that later.
         while (maxHealth > 0)
         {
         TakeDamage(damage);
@@ -88,6 +94,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    /*
     IEnumerator Die()
     {
         Time.timeScale = 0.3f;
@@ -98,9 +105,8 @@ public class PlayerHealth : MonoBehaviour
         deathCauseText.text = "You died of " + PlayerCollisionHandler.currentCollision + "!";
         //bug: dosen't seem to do timescale 0 at this point - gonna fix later.
         Time.timeScale = 0;
-        //GetComponent<PlayerControls>().enabled = false;
     }
-
+    */
 
     public void ReloadLevel()
     {

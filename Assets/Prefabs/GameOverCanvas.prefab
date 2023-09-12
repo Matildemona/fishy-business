@@ -767,7 +767,7 @@ GameObject:
   - component: {fileID: 3424098710673415281}
   - component: {fileID: 2190849137038697318}
   m_Layer: 5
-  m_Name: DeadText
+  m_Name: DeathCauseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

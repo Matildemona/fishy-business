@@ -17,16 +17,13 @@ public class PlayerCollisionHandler : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
-    //Make the death cause change depending on the last collision
     private void OnTriggerEnter(Collider collision)
     {
         currentCollision = collision.tag;
         PlayCollisionSFX();
-        //Debug.Log("The current collision is " + currentCollision);
         StartCoroutine(ResetCollision());
     }
 
-    //Which fun fact will show, depending on how you die.
     private void Update()
     {
         if (currentCollision == "Tin Can")
@@ -43,12 +40,10 @@ public class PlayerCollisionHandler : MonoBehaviour
         }
     }
 
-    //Making sure that it goes back to hunger after some time
     IEnumerator ResetCollision()
     {
         yield return new WaitForSeconds(1f);
         currentCollision = "Hunger";
-        Debug.Log("The current collision is " + currentCollision);
     }
 
     void PlayCollisionSFX()
