@@ -43,7 +43,11 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            StartCoroutine(Die());
+            gameOverCanvas.SetActive(true);
+            inGameCanvas.SetActive(false);
+            finalText.text = "You got " + score.scoretext.text + " up the stream!";
+            deathCauseText.text = "You died of " + PlayerCollisionHandler.currentCollision + "!";
+            Time.timeScale = 0;
         }
 
     }
@@ -75,24 +79,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    IEnumerator Die()
-    {
-        Time.timeScale = 0.3f;
-        yield return new WaitForSeconds(0.3f);
-        gameOverCanvas.SetActive(true);
-        inGameCanvas.SetActive(false);
-        finalText.text = "You got " + score.scoretext.text + " up the stream!";
-        deathCauseText.text = "You died of " + PlayerCollisionHandler.currentCollision + "!";
-        //bug: dosen't seem to do timescale 0 at this point - gonna fix later.
-        Time.timeScale = 0;
-        //GetComponent<PlayerControls>().enabled = false;
-    }
-
-
     public void ReloadLevel()
     {
         gameOverCanvas.SetActive(false);
-        //GetComponent<PlayerControls>().enabled = true;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
