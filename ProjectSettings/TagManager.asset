@@ -7,6 +7,8 @@ TagManager:
   - Fish
   - Tin Can
   - Audio
+  - Fork
+  - Spear
   layers:
   - Default
   - TransparentFX

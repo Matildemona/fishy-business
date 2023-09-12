@@ -2,9 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// should maybe make a level loader later idk
 using UnityEngine.SceneManagement;
 using TMPro;
+using DG.Tweening;
+
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -111,6 +112,7 @@ public class PlayerHealth : MonoBehaviour
     public void ReloadLevel()
     {
         gameOverCanvas.SetActive(false);
+        DOTween.Clear(true);
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

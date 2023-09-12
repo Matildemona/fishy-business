@@ -34,6 +34,14 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             funFact.text = "hunger is bad!";
         }
+        else if (currentCollision == "Spear")
+        {
+            funFact.text = "Spear is bad!";
+        }
+        else if (currentCollision == "Fork")
+        {
+            funFact.text = "Fork is bad!";
+        }
         else 
         {
             funFact.text = "hunger is bad! (else)";
