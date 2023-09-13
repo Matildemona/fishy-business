@@ -11,30 +11,34 @@ public class AnglerFish : MonoBehaviour
     //Blink hurtigt hvid i X sekunder.
     //Rush frem mod fisken fra X til X på X sekunder
     [Header("Angler Fish Animation Values")] 
-    [SerializeField] float fishMovesBackTime = 3f;
-    [SerializeField] float fishMovesBackDistance = 20f;
+    [SerializeField] float fishMovesBackTime = 2f;
+    [SerializeField] float fishMovesBackDistance = 10f;
     [SerializeField] float fishMovesForwardTime = 1f;
     [SerializeField] float fishMovesForwardDistance = -20f;
-    
 
-    private void Start()
-    {
-     Sequence sequence = DOTween.Sequence();
+    [Header("References to Fill")]
+    public Transform playerPosition;
+    float currentPosition;
+    bool sequence1Complete = false;
 
-        sequence.Append(transform.DOLocalMoveZ(fishMovesBackDistance, fishMovesBackTime));
-        sequence.Append(transform.DOLocalMoveZ(fishMovesForwardDistance, fishMovesForwardTime));
-
-
-        sequence.Play();
-    }
+    [SerializeField] MeshRenderer anglerFishMesh;
+    [SerializeField] Material whiteMaterial;
+    [SerializeField] Material originalMaterial;
+    float flashTime = 0.1f;
 
     private void Update()
     {
-        //transform == players transform
+        if (sequence1Complete == false)
+        {
+        transform.position = new Vector3(playerPosition.position.x, playerPosition.position.y, transform.position.z);  
+        }
+        else if (sequence1Complete == true) {
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        }
+        else { return; }
+
         //only play animation, when collider is reached.
     }
-
-    //do update that follow the player? until a specifik point
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -43,5 +47,44 @@ public class AnglerFish : MonoBehaviour
             collision.GetComponent<PlayerHealth>().TakeDamage(damageValue);
         }
     }
+
+    public void AnglerFishAnimation()
+    {
+        Sequence anglerFishSequence1 = DOTween.Sequence();
+        Sequence anglerFishSequence2 = DOTween.Sequence();
+
+        anglerFishSequence1.Append(transform.DOMove(transform.position + transform.forward * fishMovesBackDistance, fishMovesBackTime)).OnComplete(() =>
+        {
+            sequence1Complete = true;
+        });
+
+        anglerFishSequence2.Append(transform.DOMove(transform.position + transform.forward * fishMovesForwardDistance, fishMovesForwardTime)).OnComplete(() =>
+        {
+            gameObject.SetActive(false);
+        });
+
+        anglerFishSequence1.Append(anglerFishSequence2);
+    }
+
+    public void StartAnglerFishBlinking()
+    {
+        anglerFishMesh.material = whiteMaterial;
+        Invoke("SecondAnglerFishBlinking", flashTime);
+    }
+    public void SecondAnglerFishBlinking()
+    {
+        anglerFishMesh.material = originalMaterial;
+        Invoke("ThirdAnglerFishBlinking", flashTime);
+    }
+    public void ThirdAnglerFishBlinking()
+    {
+        anglerFishMesh.material = whiteMaterial;
+        Invoke("StopAnglerFishBlinking", flashTime);
+    }
+    public void StopAnglerFishBlinking()
+    {
+        anglerFishMesh.material = originalMaterial;
+    }
+
 
 }
