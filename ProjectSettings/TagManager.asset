@@ -9,6 +9,7 @@ TagManager:
   - Audio
   - Fork
   - Spear
+  - AnglerFish
   layers:
   - Default
   - TransparentFX

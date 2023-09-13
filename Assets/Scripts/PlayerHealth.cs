@@ -9,13 +9,13 @@ using DG.Tweening;
 
 public class PlayerHealth : MonoBehaviour
 {
-    int currentHealth;
+    float currentHealth;
 
     [Header("Healthbar Settings")]
     [Tooltip("Maximum amount of health.")]
     public int maxHealth = 100;
     [Tooltip("How much damage to loose each time.")]
-    public int overTimeDamageAmount = 20;
+    public float overTimeDamageAmount = 20f;
     [Tooltip("How long before more damage should be taken.")]
     public float waitBeforeDamage = 1f;
 
@@ -63,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
@@ -80,12 +80,12 @@ public class PlayerHealth : MonoBehaviour
         healthbar.SetHealth(currentHealth);
     }
 
-    public void DamageOverTime(int damage)
+    public void DamageOverTime(float damage)
     {
         StartCoroutine(DamageOverTimeCoroutine(damage));
     }
 
-    IEnumerator DamageOverTimeCoroutine(int damage)
+    IEnumerator DamageOverTimeCoroutine(float damage)
     {
         while (maxHealth > 0)
         {
