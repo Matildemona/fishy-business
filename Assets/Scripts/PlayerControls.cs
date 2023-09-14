@@ -23,10 +23,12 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float controlPitchFactor = -15f;
     [Tooltip("How much the player tilts when moving")]
     [SerializeField] float controlRollFactor = -20f;
+
     //should we do a yaw here as well? idk details for later.
 
     float xThrow;
     float yThrow;
+
 
     void Update()
     {

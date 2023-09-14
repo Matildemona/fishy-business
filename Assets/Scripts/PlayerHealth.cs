@@ -53,7 +53,6 @@ public class PlayerHealth : MonoBehaviour
             if (PlayerCollisionHandler.currentCollision == null)
             {
                 deathCauseText.text = "You died of hunger!";
-
             }
             else
             {

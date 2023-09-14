@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4560159660921247667}
-  - component: {fileID: 992351990718004921}
   - component: {fileID: 4782172382751366342}
+  - component: {fileID: 8971350164695717075}
   m_Layer: 0
   m_Name: PlayerRig
   m_TagString: Untagged
@@ -35,25 +35,6 @@ Transform:
   - {fileID: 4028125970276214899}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!320 &992351990718004921
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031887646351424003}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: d58bb50616a49e147b23cd4ae2304a95, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 4044402683174244746, guid: d58bb50616a49e147b23cd4ae2304a95, type: 2}
-    value: {fileID: 4782172382751366342}
-  m_ExposedReferences:
-    m_References: []
 --- !u!95 &4782172382751366342
 Animator:
   serializedVersion: 5
@@ -75,6 +56,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8971350164695717075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031887646351424003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676b5378225e9ac439fd88419ef305bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
 --- !u!1 &2993654264612887994
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,14 +30,13 @@ public class AnglerFish : MonoBehaviour
     {
         if (sequence1Complete == false)
         {
-        transform.position = new Vector3(playerPosition.position.x, playerPosition.position.y, transform.position.z);  
+            transform.position = new Vector3(playerPosition.position.x, playerPosition.position.y, transform.position.z);
+
         }
         else if (sequence1Complete == true) {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         }
         else { return; }
-
-        //only play animation, when collider is reached.
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -50,20 +49,14 @@ public class AnglerFish : MonoBehaviour
 
     public void AnglerFishAnimation()
     {
-        Sequence anglerFishSequence1 = DOTween.Sequence();
-        Sequence anglerFishSequence2 = DOTween.Sequence();
-
-        anglerFishSequence1.Append(transform.DOMove(transform.position + transform.forward * fishMovesBackDistance, fishMovesBackTime)).OnComplete(() =>
+        transform.DOMove(transform.position + transform.forward * fishMovesBackDistance, fishMovesBackTime).OnComplete(() =>
         {
             sequence1Complete = true;
+            transform.DOMove(transform.position + transform.forward * fishMovesForwardDistance, fishMovesForwardTime).OnComplete(() =>
+            {
+                gameObject.SetActive(false);
+            });
         });
-
-        anglerFishSequence2.Append(transform.DOMove(transform.position + transform.forward * fishMovesForwardDistance, fishMovesForwardTime)).OnComplete(() =>
-        {
-            gameObject.SetActive(false);
-        });
-
-        anglerFishSequence1.Append(anglerFishSequence2);
     }
 
     public void StartAnglerFishBlinking()
