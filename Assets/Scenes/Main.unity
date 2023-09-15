@@ -2483,7 +2483,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 6606079871512153155}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17f3ceac1fe92d741b86f04d4a85247f, type: 3}
   m_Name: 
@@ -3042,6 +3042,8 @@ MonoBehaviour:
   creatingSection: 0
   chosenSecNum: 0
   waitBeforeDestroy: 5
+  timeBeforeLevelDestroy: 16
+  startLevel: {fileID: 82562718}
 --- !u!1001 &584726394179744178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3355,6 +3357,10 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 821484851}
+    - target: {fileID: 3666635974495134019, guid: 5d2ce9c01f6a74243812b58c6847504d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3666635974495134019, guid: 5d2ce9c01f6a74243812b58c6847504d, type: 3}
       propertyPath: inGameCanvas
       value: 
