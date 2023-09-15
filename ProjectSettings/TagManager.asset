@@ -11,6 +11,7 @@ TagManager:
   - Spear
   - Angler Fish
   - Poison Fish
+  - Eel
   layers:
   - Default
   - TransparentFX

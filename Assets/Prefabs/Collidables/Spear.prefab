@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageValue: 100
-  moveUpDistance: 20
+  moveUpDistance: 15
   moveUpDuration: 1
-  moveDownDistance: 10
+  moveDownDistance: 1.5
   moveDownDuration: 0.3
   waitDuration: 1
 --- !u!1001 &3276903725416078781
