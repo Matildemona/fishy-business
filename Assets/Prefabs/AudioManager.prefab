@@ -170,8 +170,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2610244652634284303, guid: 3384d965ec963934fa941d6b51c87b5e, type: 2}
-  m_audioClip: {fileID: 8300000, guid: e9bfe44c3aff9c840bba1bb3a641cfa3, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: c130c52856d91aa4ebdec97f3adb1c68, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
@@ -304,4 +304,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 5313591553155091666}
   sfxSource: {fileID: 1093255751167070648}
-  nomSFX: {fileID: 8300000, guid: cf36fed86de2a664e9d56543ab5489b6, type: 3}
+  eatSFX:
+  - {fileID: 8300000, guid: 2324f8ae9ab347449b86ebf5afbe73c9, type: 3}
+  - {fileID: 8300000, guid: 2ce52b980ddac6247a901a3bdc4138ed, type: 3}
+  tinCanSFX: {fileID: 8300000, guid: a6f8f4a63b0273949b8e9ed2fc8bf7c6, type: 3}
+  spearSFX: {fileID: 8300000, guid: a9d4e739702ef1d4d8fca526d5a33975, type: 3}
+  anglerFishSFX: {fileID: 8300000, guid: 7de1c9e8480ccdd45a95b1e456193f1c, type: 3}
+  eelSFX: {fileID: 0}

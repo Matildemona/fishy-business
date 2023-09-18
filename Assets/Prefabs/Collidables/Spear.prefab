@@ -101,6 +101,7 @@ MonoBehaviour:
   moveDownDistance: 1.5
   moveDownDuration: 0.3
   waitDuration: 1
+  audioManager: {fileID: 0}
 --- !u!1001 &3276903725416078781
 PrefabInstance:
   m_ObjectHideFlags: 0

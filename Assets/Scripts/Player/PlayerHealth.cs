@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
     public float waitBeforeDamage = 1f;
 
 
-    [Header("Scripts")]
+    [Header("References to fill")]
     public Healthbar healthbar;
 
     public GameObject gameOverCanvas;
@@ -67,6 +67,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
     }
+
     public void AddHealth(int health)
     {
         currentHealth += health;
@@ -93,20 +94,6 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(waitBeforeDamage);
         }
     }
-
-    /*
-    IEnumerator Die()
-    {
-        Time.timeScale = 0.3f;
-        yield return new WaitForSeconds(0.3f);
-        gameOverCanvas.SetActive(true);
-        inGameCanvas.SetActive(false);
-        finalText.text = "You got " + score.scoretext.text + " up the stream!";
-        deathCauseText.text = "You died of " + PlayerCollisionHandler.currentCollision + "!";
-        //bug: dosen't seem to do timescale 0 at this point - gonna fix later.
-        Time.timeScale = 0;
-    }
-    */
 
     public void ReloadLevel()
     {

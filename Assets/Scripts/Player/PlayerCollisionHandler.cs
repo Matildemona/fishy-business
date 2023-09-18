@@ -26,6 +26,7 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     private void Update()
     {
+
         if (currentCollision == "Tin Can")
         {
             funFact.text = "Tin Can is bad!";
@@ -42,9 +43,17 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             funFact.text = "Fork is bad!";
         }
+        else if (currentCollision == "Angler Fish")
+        {
+            funFact.text = "Angler Fish is bad!";
+        }
+        else if (currentCollision == "Eel")
+        {
+            funFact.text = "Eel Fish is bad!";
+        }
         else 
         {
-            funFact.text = "hunger is bad! (else)";
+            currentCollision = "Hunger";
         }
     }
 
@@ -56,9 +65,26 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     void PlayCollisionSFX()
     {
-        if(currentCollision == "Fish")
+        if (currentCollision == "Fish")
         {
-            audioManager.PlaySFX(audioManager.nomSFX);
+            audioManager.PlayRandomSFX();
         }
+        else if (currentCollision == "Tin Can")
+        {
+            audioManager.PlaySFX(audioManager.tinCanSFX);
+        }
+        else if (currentCollision == "Spear")
+        {
+            audioManager.PlaySFX(audioManager.spearSFX);
+        }
+        else if (currentCollision == "Angler Fish")
+        {
+            audioManager.PlaySFX(audioManager.anglerFishSFX);
+        }
+        else if (currentCollision == "Eel")
+        {
+            audioManager.PlaySFX(audioManager.eelSFX);
+        }
+        else { return; }
     }
 }

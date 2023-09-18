@@ -691,6 +691,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3430873585047773862, guid: 78b81c60a8941574bb8ffcebf0d5d1f4, type: 3}
   m_PrefabInstance: {fileID: 511435199}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &540385472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4166190401457471618, guid: 0c599552db336044db4c0317731e1511, type: 3}
+  m_PrefabInstance: {fileID: 7012596726355305558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec294f3516b97a49aae32ff097f456e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &620865774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2483,7 +2494,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 6606079871512153155}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17f3ceac1fe92d741b86f04d4a85247f, type: 3}
   m_Name: 
@@ -3359,8 +3370,12 @@ PrefabInstance:
       objectReference: {fileID: 821484851}
     - target: {fileID: 3666635974495134019, guid: 5d2ce9c01f6a74243812b58c6847504d, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3666635974495134019, guid: 5d2ce9c01f6a74243812b58c6847504d, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 540385472}
     - target: {fileID: 3666635974495134019, guid: 5d2ce9c01f6a74243812b58c6847504d, type: 3}
       propertyPath: inGameCanvas
       value: 
@@ -3531,9 +3546,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4166190401457471618, guid: 0c599552db336044db4c0317731e1511, type: 3}
+      propertyPath: eelSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 70d3a460a8917bc4c96b05ac5b6e17b7, type: 3}
     - target: {fileID: 5313591553155091666, guid: 0c599552db336044db4c0317731e1511, type: 3}
       propertyPath: Mute
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8764171690911242634, guid: 0c599552db336044db4c0317731e1511, type: 3}
       propertyPath: m_Name

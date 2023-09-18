@@ -12,6 +12,7 @@ public class SpearScript : MonoBehaviour
     [SerializeField] float moveDownDistance = 6.25f;
     [SerializeField] float moveDownDuration = 0.5f;
     [SerializeField] float waitDuration = 1f;
+    public AudioManager audioManager;
 
 
     private void OnTriggerEnter(Collider collision)
@@ -24,9 +25,6 @@ public class SpearScript : MonoBehaviour
 
     void Start()
     {
-        //if (this != null)
-        
-       //{
         Sequence sequence = DOTween.Sequence();
 
         sequence.Append(transform.DOMoveY(moveUpDistance, moveUpDuration));
@@ -36,8 +34,15 @@ public class SpearScript : MonoBehaviour
         sequence.SetLoops(-1);
 
         sequence.Play();
-        //}
-        //else { DOTween.KillAll();}
+    }
+
+    private void Update()
+    {
+        if(transform.position.y == -2.5f)
+        {
+            audioManager.PlaySFX(audioManager.spearSFX);
+            Debug.Log("Playing Spear Sound");
+        }
     }
 }
 
