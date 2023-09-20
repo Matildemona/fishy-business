@@ -9,7 +9,7 @@ public class TinCanAnimation : MonoBehaviour
     [SerializeField] float movingTime = 2f;
     private void Start()
     {
-        transform.DOLocalMoveY(movingDistance, movingTime).SetLoops(-1, LoopType.Yoyo);
+        transform.DOMoveY(movingDistance, movingTime).SetLoops(-1, LoopType.Yoyo);
         //transform.rotation = Random.rotation;
     }
 }

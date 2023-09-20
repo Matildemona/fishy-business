@@ -310,4 +310,5 @@ MonoBehaviour:
   tinCanSFX: {fileID: 8300000, guid: a6f8f4a63b0273949b8e9ed2fc8bf7c6, type: 3}
   spearSFX: {fileID: 8300000, guid: a9d4e739702ef1d4d8fca526d5a33975, type: 3}
   anglerFishSFX: {fileID: 8300000, guid: 7de1c9e8480ccdd45a95b1e456193f1c, type: 3}
-  eelSFX: {fileID: 0}
+  eelSFX: {fileID: 8300000, guid: 70d3a460a8917bc4c96b05ac5b6e17b7, type: 3}
+  clickSFX: {fileID: 8300000, guid: e3244319d54d12547af84e754a738386, type: 3}

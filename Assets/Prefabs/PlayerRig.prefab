@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676b5378225e9ac439fd88419ef305bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 8
 --- !u!1 &2993654264612887994
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +180,7 @@ Transform:
   m_GameObject: {fileID: 3878174934174770585}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13052616, y: -0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 0.88, z: -8}
+  m_LocalPosition: {x: 0, y: 1, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -422,8 +422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  overTimeDamageAmount: 10
-  waitBeforeDamage: 1
+  overTimeDamageAmount: 0.25
+  waitBeforeDamage: 0.025
   healthbar: {fileID: 0}
   gameOverCanvas: {fileID: 0}
   inGameCanvas: {fileID: 0}
@@ -443,6 +443,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   funFact: {fileID: 0}
-  playerFishMesh: {fileID: 6572875255537199406}
-  whiteMaterial: {fileID: 2100000, guid: a87afa52f2e6d7b4090c371eb4592e0d, type: 2}
-  originalMaterial: {fileID: 2100000, guid: fe905a1c3dfb8e1449b74b60fea44b6b, type: 2}

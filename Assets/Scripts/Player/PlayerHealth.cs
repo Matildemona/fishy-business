@@ -20,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
     public float waitBeforeDamage = 1f;
 
 
+
     [Header("References to fill")]
     public Healthbar healthbar;
 
@@ -30,6 +31,8 @@ public class PlayerHealth : MonoBehaviour
     public TMP_Text deathCauseText;
 
     public Score score;
+
+    [SerializeField] AudioManager audioManager;
 
     void Start()
     {
@@ -97,6 +100,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void ReloadLevel()
     {
+        audioManager.PlaySFX(audioManager.clickSFX);
         gameOverCanvas.SetActive(false);
         DOTween.Clear(true);
         Time.timeScale = 1;
