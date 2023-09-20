@@ -10,10 +10,8 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Clips")]
     public AudioClip[] eatSFX;
-    public AudioClip tinCanSFX;
-    public AudioClip spearSFX;
-    public AudioClip anglerFishSFX;
-    public AudioClip eelSFX;
+    public AudioClip tinCanSFX, spearSFX, anglerFishSFX, eelSFX, clickSFX;
+
 
     private void Awake()
     {
