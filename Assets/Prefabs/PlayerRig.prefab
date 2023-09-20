@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676b5378225e9ac439fd88419ef305bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
+  moveSpeed: 11
 --- !u!1 &2993654264612887994
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +430,7 @@ MonoBehaviour:
   finalText: {fileID: 0}
   deathCauseText: {fileID: 0}
   score: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!114 &5692352869718560221
 MonoBehaviour:
   m_ObjectHideFlags: 0
