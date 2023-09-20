@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1861756415838724005}
   - component: {fileID: 3816081556080725942}
   m_Layer: 0
-  m_Name: Fish
+  m_Name: Fish1
   m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f29b78c035cf245a87284978fd21e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthValue: 20
+  healthValue: 10
 --- !u!1001 &5239879693332305594
 PrefabInstance:
   m_ObjectHideFlags: 0

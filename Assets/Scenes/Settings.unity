@@ -1256,6 +1256,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141036598}
   m_CullTransparentMesh: 1
+--- !u!114 &1142733006 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4166190401457471618, guid: 0c599552db336044db4c0317731e1511, type: 3}
+  m_PrefabInstance: {fileID: 1538007601}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec294f3516b97a49aae32ff097f456e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1323159794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,7 +1807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313591553155091666, guid: 0c599552db336044db4c0317731e1511, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8764171690911242634, guid: 0c599552db336044db4c0317731e1511, type: 3}
       propertyPath: m_Name
@@ -1915,6 +1926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 3384d965ec963934fa941d6b51c87b5e, type: 2}
+  audioManager: {fileID: 1142733006}
 --- !u!114 &1561930969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2545,6 +2557,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8747675608319553488, guid: 9f114109c826f6142b34092fb64d939b, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1142733006}
     - target: {fileID: 8762225029327594486, guid: 9f114109c826f6142b34092fb64d939b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

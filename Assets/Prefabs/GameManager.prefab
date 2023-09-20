@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6437650766033428636}
   - component: {fileID: 2776255155229917788}
   - component: {fileID: 6732584077266771965}
+  - component: {fileID: 3712916979376915707}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -67,3 +68,24 @@ MonoBehaviour:
   waitBeforeDestroy: 5
   timeBeforeLevelDestroy: 16
   startLevel: {fileID: 0}
+--- !u!114 &3712916979376915707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058425647138534578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c665943ce2a61942bf34d16db7294e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  readyText: {fileID: 0}
+  setText: {fileID: 0}
+  goText: {fileID: 0}
+  countDownCanvas: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  audioManager: {fileID: 0}
+  playerRigMovement: {fileID: 0}
+  playerHealth: {fileID: 0}
+  playerControls: {fileID: 0}

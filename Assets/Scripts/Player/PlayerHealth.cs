@@ -33,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
     public Score score;
 
     [SerializeField] AudioManager audioManager;
+    [SerializeField] CountDownStart countDownStart;
 
     void Start()
     {
@@ -100,10 +101,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void ReloadLevel()
     {
+        Time.timeScale = 1;
         audioManager.PlaySFX(audioManager.clickSFX);
         gameOverCanvas.SetActive(false);
         DOTween.Clear(true);
-        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        StartCoroutine(countDownStart.CountDownCanvas());
     }
 }

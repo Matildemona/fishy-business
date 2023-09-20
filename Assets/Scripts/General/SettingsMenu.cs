@@ -6,6 +6,8 @@ using UnityEngine.Audio;
 public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
+    [SerializeField] AudioManager audioManager;
+
     public void SetMaterVolume(float volume)
     {
         audioMixer.SetFloat("masterVolume", volume);
@@ -17,5 +19,10 @@ public class SettingsMenu : MonoBehaviour
     public void SetSFXVolume(float volume)
     {
         audioMixer.SetFloat("SFXVolume", volume);
-    } 
+        if (!audioManager.sfxSource.isPlaying)
+        {
+            audioManager.PlaySFX(audioManager.tinCanSFX);
+        }
+        else { return; }
+    }
 }

@@ -6,20 +6,21 @@ public class AudioManager : MonoBehaviour
 {
     [Header("Audio Sources")] 
     [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource sfxSource;
+    public AudioSource sfxSource;
 
     [Header("Audio Clips")]
     public AudioClip[] eatSFX;
-    public AudioClip tinCanSFX, spearSFX, anglerFishSFX, eelSFX, clickSFX;
+    public AudioClip tinCanSFX, spearSFX, anglerFishSFX, eelSFX, clickSFX, readysetSFX, goSFX;
 
 
     private void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
-    private void Start()
+
+    private void Update()
     {
-        if (musicSource.isPlaying == false)
+        if (!musicSource.isPlaying)
         {
             musicSource.Play();
         }

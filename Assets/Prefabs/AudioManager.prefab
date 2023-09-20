@@ -312,3 +312,5 @@ MonoBehaviour:
   anglerFishSFX: {fileID: 8300000, guid: 7de1c9e8480ccdd45a95b1e456193f1c, type: 3}
   eelSFX: {fileID: 8300000, guid: 70d3a460a8917bc4c96b05ac5b6e17b7, type: 3}
   clickSFX: {fileID: 8300000, guid: e3244319d54d12547af84e754a738386, type: 3}
+  readysetSFX: {fileID: 8300000, guid: 08b9becdec5088541980c090c8a1fd47, type: 3}
+  goSFX: {fileID: 8300000, guid: ff5fb10517117bc49ade1ce3818df7a0, type: 3}
