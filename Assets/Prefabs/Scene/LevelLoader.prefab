@@ -44,3 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f510b60239c4c6c419d757a85cf36425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenuCanvas: {fileID: 0}
+  isPaused: 0
+  audioManager: {fileID: 0}
+  settingsCanvas: {fileID: 0}
+  titlescreenCanvas: {fileID: 0}
+  countDownStart: {fileID: 0}
+  tutorialCanvas: {fileID: 7636136750150664289, guid: 5e08230ba0913bb49a0046ae34fa4a65, type: 3}
