@@ -314,3 +314,5 @@ MonoBehaviour:
   clickSFX: {fileID: 8300000, guid: e3244319d54d12547af84e754a738386, type: 3}
   readysetSFX: {fileID: 8300000, guid: 08b9becdec5088541980c090c8a1fd47, type: 3}
   goSFX: {fileID: 8300000, guid: ff5fb10517117bc49ade1ce3818df7a0, type: 3}
+  bGMusic: {fileID: 8300000, guid: c130c52856d91aa4ebdec97f3adb1c68, type: 3}
+  tLMusic: {fileID: 8300000, guid: cdaf46239191c1e4eafaba237b472862, type: 3}

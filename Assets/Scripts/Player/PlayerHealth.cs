@@ -102,7 +102,7 @@ public class PlayerHealth : MonoBehaviour
     public void ReloadLevel()
     {
         Time.timeScale = 1;
-        audioManager.PlaySFX(audioManager.clickSFX);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickSFX);
         gameOverCanvas.SetActive(false);
         DOTween.Clear(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
