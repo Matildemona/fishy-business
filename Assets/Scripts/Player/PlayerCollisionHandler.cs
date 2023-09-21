@@ -29,15 +29,15 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         if (currentCollision == "Tin Can")
         {
-            funFact.text = "Tin Can is bad!";
+            funFact.text = "Almost 40% of the ocean surface is covered in trash.";
         }
         else if (currentCollision == "Hunger")
         {
-            funFact.text = "hunger is bad!";
+            funFact.text = "Over 100 million marine animals die because of the lack of food or because they eat trash.";
         }
         else if (currentCollision == "Spear")
         {
-            funFact.text = "Spear is bad!";
+            funFact.text = "Approximately 80% of the fish that we eat are being over-fished";
         }
         else if (currentCollision == "Fork")
         {
@@ -45,17 +45,30 @@ public class PlayerCollisionHandler : MonoBehaviour
         }
         else if (currentCollision == "Angler Fish")
         {
-            funFact.text = "Angler Fish is bad!";
+            funFact.text = "Each year more marine animals are found outside their habitats because of the lack of food.";
         }
         else if (currentCollision == "Eel")
         {
-            funFact.text = "Eel Fish is bad!";
+            funFact.text = "Coral reefs are being destroyed, causing millions of marine animal to move form their natural habitats.";
         }
         else 
         {
             currentCollision = "Hunger";
         }
     }
+
+    /*
+     
+    Tin can - Almost 40% of the oceans surface is covered in trash.
+
+Hunger - Over 100 million marine animals die because of the lack of food or because they eat trash.
+
+Spear - Approximately 80% of the fish that we eat are being over-fished (idk if this word is correct)
+
+Angler fish - Each year more marine animals are found outside their habitats because of the lack of food.
+
+Eel - Coral reefs are being destroyed, causing millions of marine animal to move form their natural spots.
+     */
 
     IEnumerator ResetCollision()
     {
