@@ -12,6 +12,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] Canvas settingsCanvas;
     [SerializeField] Canvas titlescreenCanvas;
     [SerializeField] CountDownStart countDownStart;
+    [SerializeField] GameObject tutorialCanvas;
 
     private void Update()
     {
@@ -39,7 +40,7 @@ public class LevelLoader : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX(AudioManager.Instance.clickSFX);
         AudioManager.Instance.PlayMusic(AudioManager.Instance.bGMusic);
-        Time.timeScale = 1;
+        Time.timeScale = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -70,6 +71,13 @@ public class LevelLoader : MonoBehaviour
         AudioManager.Instance.PlaySFX(audioManager.clickSFX);
         titlescreenCanvas.enabled = false;
         settingsCanvas.enabled = true;
+    }
+
+    public void TutorialContinue()
+    {
+        AudioManager.Instance.PlaySFX(audioManager.clickSFX);
+        Time.timeScale = 1;
+        tutorialCanvas.SetActive(false);
     }
 
 }
