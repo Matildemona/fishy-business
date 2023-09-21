@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &337350222119575554
+--- !u!1 &3484603215550204104
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,170 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3977919915418250816}
-  - component: {fileID: 1746755736124112065}
-  - component: {fileID: 6700094843723332706}
-  m_Layer: 0
-  m_Name: AnglerFishModel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3977919915418250816
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337350222119575554}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6262249729388619865}
-  m_RootOrder: -2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1746755736124112065
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337350222119575554}
-  m_Mesh: {fileID: 5479413674732284688, guid: 63b937807eb66384aa5d4b5b00a28e4c, type: 3}
---- !u!23 &6700094843723332706
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337350222119575554}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 7806100501455280664, guid: 63b937807eb66384aa5d4b5b00a28e4c, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &2476333092830460175
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5479288615244147970}
-  - component: {fileID: 6244433519823598125}
-  - component: {fileID: 5041277805375719110}
-  m_Layer: 0
-  m_Name: AnglerFish
-  m_TagString: Angler Fish
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5479288615244147970
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2476333092830460175}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.5, z: 26}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3126702901279589649}
-  - {fileID: 6262249729388619865}
-  - {fileID: 6815845402792285689}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6244433519823598125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2476333092830460175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe05140221115548b935c6421544591, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageValue: 100
-  fishMovesBackTime: 0.5
-  fishMovesBackDistance: 15
-  fishMovesForwardTime: 0.5
-  fishMovesForwardDistance: -30
-  playerPosition: {fileID: 0}
-  anglerFishMesh: {fileID: 6700094843723332706}
-  whiteMaterial: {fileID: 2100000, guid: a87afa52f2e6d7b4090c371eb4592e0d, type: 2}
-  originalMaterial: {fileID: 7806100501455280664, guid: 63b937807eb66384aa5d4b5b00a28e4c, type: 3}
---- !u!65 &5041277805375719110
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2476333092830460175}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1.2287949, z: 2.3588}
-  m_Center: {x: 0, y: 1.2322974, z: 0.5058125}
---- !u!1 &3853852652801026064
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6815845402792285689}
-  - component: {fileID: 5039129887891079978}
-  - component: {fileID: 3155572551588972057}
+  - component: {fileID: 3857872926924077845}
+  - component: {fileID: 7943594597854735977}
+  - component: {fileID: 7827531895308689234}
   m_Layer: 0
   m_Name: Bubbles (1)
   m_TagString: Untagged
@@ -179,28 +18,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6815845402792285689
+--- !u!4 &3857872926924077845
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3853852652801026064}
-  m_LocalRotation: {x: -0.022087006, y: -0, z: -0, w: 0.9997561}
-  m_LocalPosition: {x: 0.087, y: 1.24, z: 0.8}
-  m_LocalScale: {x: 0.15753895, y: 0.15753895, z: 0.15753895}
+  m_GameObject: {fileID: 3484603215550204104}
+  m_LocalRotation: {x: 0.5523022, y: 0.44097307, z: -0.44145152, w: -0.5528342}
+  m_LocalPosition: {x: -63.59609, y: 9.817671, z: -2.200079}
+  m_LocalScale: {x: 0.09053381, y: 0.09053384, z: 0.090533786}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5479288615244147970}
+  m_Father: {fileID: 2341025395451993569}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -2.531, y: 0, z: 0}
---- !u!198 &5039129887891079978
+  m_LocalEulerAnglesHint: {x: 180, y: 92.376, z: -89.50702}
+--- !u!198 &7943594597854735977
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3853852652801026064}
+  m_GameObject: {fileID: 3484603215550204104}
   serializedVersion: 8
   lengthInSec: 5
   simulationSpeed: 1.31
@@ -4917,14 +4756,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &3155572551588972057
+--- !u!199 &7827531895308689234
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3853852652801026064}
+  m_GameObject: {fileID: 3484603215550204104}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -4989,102 +4828,72 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!1 &4752625347007365459
-GameObject:
+--- !u!1001 &6698762758687295612
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3126702901279589649}
-  - component: {fileID: 6942415624341701051}
-  - component: {fileID: 6724609876958037819}
-  m_Layer: 0
-  m_Name: TriggerBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3126702901279589649
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8341102161712197898, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_RootOrder
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341102161712197898, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -77.98157
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341102161712197898, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341102161712197898, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -38.751465
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341102161712197898, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341102161712197898, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341102161712197898, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341102161712197898, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341102161712197898, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341102161712197898, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341102161712197898, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685856628549446576, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      propertyPath: m_Name
+      value: Anglerfish animation Variant Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8974045738211841437, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 3857872926924077845}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+--- !u!4 &2341025395451993569 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8974045738211841437, guid: 953fb24371ca9c14b8c9a25d77d1baae, type: 3}
+  m_PrefabInstance: {fileID: 6698762758687295612}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752625347007365459}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5479288615244147970}
-  m_RootOrder: -2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6942415624341701051
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752625347007365459}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 8.911304, y: 5.721883, z: 0.4958576}
-  m_Center: {x: 2.218828, y: 0.6723213, z: 0}
---- !u!114 &6724609876958037819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752625347007365459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05bf1f4a1f59a094296d6e541f6d1080, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anglerFishScript: {fileID: 6244433519823598125}
---- !u!1 &6749816531922645731
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6262249729388619865}
-  m_Layer: 0
-  m_Name: AnglerFish
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6262249729388619865
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6749816531922645731}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3977919915418250816}
-  m_Father: {fileID: 5479288615244147970}
-  m_RootOrder: -2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
