@@ -9,8 +9,9 @@ public class LevelLoader : MonoBehaviour
     public GameObject pauseMenuCanvas;
     public bool isPaused = false;
     [SerializeField] AudioManager audioManager;
-    [SerializeField] Canvas settingsCanvas;
-    [SerializeField] Canvas titlescreenCanvas;
+    [SerializeField] GameObject settingsCanvas;
+    [SerializeField] GameObject titlescreenCanvas;
+    [SerializeField] GameObject creditsCanvas;
     [SerializeField] CountDownStart countDownStart;
     [SerializeField] GameObject tutorialCanvas;
 
@@ -62,15 +63,16 @@ public class LevelLoader : MonoBehaviour
     public void FromSettingsToMenu()
     {
         AudioManager.Instance.PlaySFX(audioManager.clickSFX);
-        settingsCanvas.enabled = false;
-        titlescreenCanvas.enabled = true;
+        settingsCanvas.SetActive(false);
+        creditsCanvas.SetActive(false);
+        titlescreenCanvas.SetActive(true);
     }
 
     public void LoadSettings()
     {
         AudioManager.Instance.PlaySFX(audioManager.clickSFX);
-        titlescreenCanvas.enabled = false;
-        settingsCanvas.enabled = true;
+        titlescreenCanvas.SetActive(false);
+        settingsCanvas.SetActive(true);
     }
 
     public void TutorialContinue()
@@ -78,6 +80,14 @@ public class LevelLoader : MonoBehaviour
         AudioManager.Instance.PlaySFX(audioManager.clickSFX);
         Time.timeScale = 1;
         tutorialCanvas.SetActive(false);
+    }
+
+    public void LoadCredits()
+    {
+        AudioManager.Instance.PlaySFX(audioManager.clickSFX);
+        titlescreenCanvas.SetActive(false);
+        settingsCanvas.SetActive(false);
+        creditsCanvas.SetActive(true);
     }
 
 }
