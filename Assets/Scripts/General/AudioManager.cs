@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip[] eatSFX;
     public AudioClip tinCanSFX, spearSFX, anglerFishSFX, eelSFX, clickSFX, readysetSFX, goSFX;
-    public AudioClip bGMusic, tLMusic;
+    public AudioClip bGMusic1, bGMusic2, bGMusic3, tLMusic;
 
     public void PlayMusic(AudioClip audio)
     {

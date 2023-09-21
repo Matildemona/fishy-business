@@ -33,14 +33,32 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        AudioManager.Instance.PlaySFX(audioManager.clickSFX);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickSFX);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(countDownStart.CountDownCanvas());
+    }
+
+    public void LoadLevel2()
+    {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickSFX);
+        SceneManager.LoadScene(2);
+        AudioManager.Instance.musicSource.Stop();
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.bGMusic2);
+        StartCoroutine(countDownStart.CountDownCanvas());
+    }
+
+    public void LoadLevel3()
+    {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickSFX);
+        SceneManager.LoadScene(3);
+        AudioManager.Instance.musicSource.Stop();
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.bGMusic3);
         StartCoroutine(countDownStart.CountDownCanvas());
     }
     public void PlayGame()
     {
         AudioManager.Instance.PlaySFX(AudioManager.Instance.clickSFX);
-        AudioManager.Instance.PlayMusic(AudioManager.Instance.bGMusic);
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.bGMusic1);
         Time.timeScale = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

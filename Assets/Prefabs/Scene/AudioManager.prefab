@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179036224445288999}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1084557469597848038}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1093255751167070648
 AudioSource:
@@ -152,13 +152,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642209777866069094}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1084557469597848038}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &5313591553155091666
 AudioSource:
@@ -280,7 +280,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8764171690911242634}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -289,6 +288,7 @@ Transform:
   - {fileID: 4612184505008826351}
   - {fileID: 1461898105794399345}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4166190401457471618
 MonoBehaviour:
@@ -305,8 +305,8 @@ MonoBehaviour:
   musicSource: {fileID: 5313591553155091666}
   sfxSource: {fileID: 1093255751167070648}
   eatSFX:
-  - {fileID: 8300000, guid: 2324f8ae9ab347449b86ebf5afbe73c9, type: 3}
-  - {fileID: 8300000, guid: 2ce52b980ddac6247a901a3bdc4138ed, type: 3}
+  - {fileID: 8300000, guid: b3eceeb1044f4dd4fb9bd84161529ae2, type: 3}
+  - {fileID: 8300000, guid: c47f4b17f43d6b14eb44fe0c2de376cd, type: 3}
   tinCanSFX: {fileID: 8300000, guid: a6f8f4a63b0273949b8e9ed2fc8bf7c6, type: 3}
   spearSFX: {fileID: 8300000, guid: a9d4e739702ef1d4d8fca526d5a33975, type: 3}
   anglerFishSFX: {fileID: 8300000, guid: 7de1c9e8480ccdd45a95b1e456193f1c, type: 3}
@@ -314,5 +314,7 @@ MonoBehaviour:
   clickSFX: {fileID: 8300000, guid: e3244319d54d12547af84e754a738386, type: 3}
   readysetSFX: {fileID: 8300000, guid: 08b9becdec5088541980c090c8a1fd47, type: 3}
   goSFX: {fileID: 8300000, guid: ff5fb10517117bc49ade1ce3818df7a0, type: 3}
-  bGMusic: {fileID: 8300000, guid: c130c52856d91aa4ebdec97f3adb1c68, type: 3}
+  bGMusic1: {fileID: 8300000, guid: c130c52856d91aa4ebdec97f3adb1c68, type: 3}
+  bGMusic2: {fileID: 8300000, guid: d46d2a4520dc614478e1a34be8fd39aa, type: 3}
+  bGMusic3: {fileID: 8300000, guid: 2680ba9ac1e6991449d8e6fabf7d591f, type: 3}
   tLMusic: {fileID: 8300000, guid: cdaf46239191c1e4eafaba237b472862, type: 3}
