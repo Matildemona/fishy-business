@@ -5,13 +5,13 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [Header("Audio Sources")] 
-    [SerializeField] AudioSource musicSource;
+    public AudioSource musicSource;
     public AudioSource sfxSource;
 
     [Header("Audio Clips")]
     public AudioClip[] eatSFX;
     public AudioClip tinCanSFX, spearSFX, anglerFishSFX, eelSFX, clickSFX, readysetSFX, goSFX;
-
+    public AudioClip bGMusic, tLMusic;
 
     private void Awake()
     {

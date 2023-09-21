@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eel Model
       objectReference: {fileID: 0}
+    - target: {fileID: 2221103866354829164, guid: ca6b41e1809c71640aaf93b6a7bd5641, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1567818261435876064, guid: 290fb54735e3c7b42bfa6e623bc8c226, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

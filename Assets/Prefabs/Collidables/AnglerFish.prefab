@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5479288615244147970}
   - component: {fileID: 6244433519823598125}
   - component: {fileID: 5041277805375719110}
+  - component: {fileID: 7504603824146386382}
   m_Layer: 0
   m_Name: AnglerFish
   m_TagString: Angler Fish
@@ -160,6 +161,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.2287949, z: 2.3588}
   m_Center: {x: 0, y: 1.2322974, z: 0.5058125}
+--- !u!95 &7504603824146386382
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2476333092830460175}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3f8e181f404bfe42a91db9ae4633cd3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4752625347007365459
 GameObject:
   m_ObjectHideFlags: 0
