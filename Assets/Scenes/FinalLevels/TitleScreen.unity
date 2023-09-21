@@ -3727,6 +3727,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 430039101}
     - target: {fileID: 8747675608319553488, guid: 9f114109c826f6142b34092fb64d939b, type: 3}
+      propertyPath: tutorialCanvas
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747675608319553488, guid: 9f114109c826f6142b34092fb64d939b, type: 3}
       propertyPath: titlescreenCanvas
       value: 
       objectReference: {fileID: 938805237}
