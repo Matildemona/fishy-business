@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager Instance { get; private set; }
+    private void Awake()
+    {
+        
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     [Header("Audio Sources")] 
     public AudioSource musicSource;
     public AudioSource sfxSource;
@@ -13,18 +28,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip tinCanSFX, spearSFX, anglerFishSFX, eelSFX, clickSFX, readysetSFX, goSFX;
     public AudioClip bGMusic, tLMusic;
 
-    private void Awake()
+    public void PlayMusic(AudioClip audio)
     {
-        DontDestroyOnLoad(gameObject);
-    }
-
-    private void Update()
-    {
-        if (!musicSource.isPlaying)
-        {
-            musicSource.Play();
-        }
-        else { return; }
+        musicSource.clip = audio;
+        musicSource.Play();
     }
     public void PlaySFX(AudioClip clip)
     {

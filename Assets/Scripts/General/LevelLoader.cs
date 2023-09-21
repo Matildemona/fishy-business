@@ -12,7 +12,6 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] Canvas settingsCanvas;
     [SerializeField] Canvas titlescreenCanvas;
     [SerializeField] CountDownStart countDownStart;
-    
 
     private void Update()
     {
@@ -32,40 +31,43 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        audioManager.PlaySFX(audioManager.clickSFX);
+        AudioManager.Instance.PlaySFX(audioManager.clickSFX);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         StartCoroutine(countDownStart.CountDownCanvas());
     }
     public void PlayGame()
     {
-        audioManager.PlaySFX(audioManager.clickSFX);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.clickSFX);
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.bGMusic);
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
     {
-        audioManager.PlaySFX(audioManager.clickSFX);
+        AudioManager.Instance.PlaySFX(audioManager.clickSFX);
         Application.Quit();
         Debug.Log("Quit Game");
     }
 
     public void GoToMenu()
     {
-        audioManager.PlaySFX(audioManager.clickSFX);
+        AudioManager.Instance.PlaySFX(audioManager.clickSFX);
+        AudioManager.Instance.musicSource.Stop();
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.tLMusic);
         SceneManager.LoadScene(0);
     }
 
     public void FromSettingsToMenu()
     {
-        audioManager.PlaySFX(audioManager.clickSFX);
+        AudioManager.Instance.PlaySFX(audioManager.clickSFX);
         settingsCanvas.enabled = false;
         titlescreenCanvas.enabled = true;
     }
 
     public void LoadSettings()
     {
-        audioManager.PlaySFX(audioManager.clickSFX);
+        AudioManager.Instance.PlaySFX(audioManager.clickSFX);
         titlescreenCanvas.enabled = false;
         settingsCanvas.enabled = true;
     }

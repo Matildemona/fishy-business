@@ -33,15 +33,16 @@ public class CountDownStart : MonoBehaviour
         readyText.enabled = false;
         yield return new WaitForSeconds(0.5f);
         readyText.enabled = true;
-        audioManager.PlaySFX(audioManager.readysetSFX);
+
+        AudioManager.Instance.PlaySFX(audioManager.readysetSFX);
         yield return new WaitForSeconds(1);
         readyText.enabled = false;
         setText.enabled = true;
-        audioManager.PlaySFX(audioManager.readysetSFX);
+        AudioManager.Instance.PlaySFX(audioManager.readysetSFX);
         yield return new WaitForSeconds(1);
         setText.enabled = false;
         goText.enabled = true;
-        audioManager.PlaySFX(audioManager.goSFX);
+        AudioManager.Instance.PlaySFX(audioManager.goSFX);
         yield return new WaitForSeconds(1);
         Time.timeScale = 1;
         countDownCanvas.enabled = false;
